@@ -27,16 +27,22 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     compileOnly("org.projectlombok:lombok")
-    developmentOnly("org.springframework.boot:spring-boot-devtools")
+
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     annotationProcessor("org.projectlombok:lombok")
+    developmentOnly("org.springframework.boot:spring-boot-devtools")
+    testRuntimeOnly("org.spekframework.spek2:spek-runner-junit5:2.0.9")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
+    testImplementation("org.spekframework.spek2:spek-dsl-jvm:2.0.9")
 }
 
 tasks.withType<Test> {
-    useJUnitPlatform()
+    useJUnitPlatform{
+        includeEngines = setOf<String>("spek2")
+    }
+
 }
 
 tasks.withType<KotlinCompile> {
