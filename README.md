@@ -1,6 +1,6 @@
 # karaoke-kotlin
 
-https://travis-ci.org/jangchulwoon/karaoke-kotlin.svg?branch=master
+![travis](https://travis-ci.org/jangchulwoon/karaoke-kotlin.svg?branch=master)
 
 
 코틀린 공부겸 / 스프링 부트 공부겸 예전에 만들어둔  karaokeParser 를 다시 만들어봅니다.
