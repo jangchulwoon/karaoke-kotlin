@@ -6,11 +6,10 @@ import org.junit.jupiter.api.Test
 import org.springframework.boot.runApplication
 import org.springframework.boot.test.context.SpringBootTest
 
-@SpringBootTest
+//@SpringBootTest
 class KaraokeApplicationTests {
 
-    // 얘는 테스트를 어떻게 짜지?
-    @Test
+   // @Test
     fun contextLoads() {
         runApplication<KaraokeApplication>()
 
