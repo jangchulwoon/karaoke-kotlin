@@ -1,0 +1,12 @@
+language: java
+jdk:
+  - oraclejdk8
+
+branch:
+  only:
+    - master
+install:
+  - gradle assemble
+
+script:
+  - gradle test
