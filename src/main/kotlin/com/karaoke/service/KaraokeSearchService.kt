@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service
 enum class SearchType(val type: String) {
     NUMBER("number"),
     SINGER("singer"),
+    TITLE("title"),
     LYRICIST("lyricist"),
     SONGWRITER("songwirter"),
     INVALID("invalid");
@@ -28,6 +29,6 @@ class KaraokeSearchService(@Autowired val karaokeParser: KaraokeParser){
             return;
         }
 
-        karaokeParser.searchSong(type, keyword)
+        karaokeParser.searchSong(KaraokeCompany.TJ,type, keyword)
     }
 }

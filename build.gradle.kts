@@ -26,8 +26,9 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    compileOnly("org.projectlombok:lombok")
+    implementation("org.jsoup:jsoup:1.11.3")
 
+    compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     annotationProcessor("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
@@ -39,7 +40,7 @@ dependencies {
 }
 
 tasks.withType<Test> {
-    useJUnitPlatform{
+    useJUnitPlatform {
         includeEngines = setOf<String>("spek2")
     }
 
