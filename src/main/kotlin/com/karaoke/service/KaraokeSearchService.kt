@@ -24,7 +24,7 @@ enum class SearchType(val type: String) {
 @Service
 class KaraokeSearchService(@Autowired val karaokeParser: KaraokeParser){
 
-    fun findSong(type: SearchType, keyword: String) {
+    fun findSong(company: KaraokeCompany, type: SearchType, keyword: String) {
         if(type == SearchType.INVALID){
             return;
         }
